@@ -24,7 +24,6 @@ pipeline {
 //        echo "JAVA_HOME = ${JAVA_HOME}"
         sh 'gradle clean build '
         sh 'gradle uploadArchives '	    
-        }
       }
     }
   }
