@@ -24,10 +24,14 @@ pipeline {
     }
 
     stage("Build and deploy"){
-      steps{
-        echo "JAVA_HOME = ${JAVA_HOME}"
-        sh 'gradle clean build '
-        sh 'gradle uploadArchives '	    
+	steps{
+	sh 'ls -al'	
+	echo "JAVA_HOME = ${JAVA_HOME}"
+	dir ("helloworldgradlepipeline"){	
+          sh 'ls -al'
+          sh 'gradle clean build '
+          sh 'gradle uploadArchives '	    
+	}
       }
     }
   }
