@@ -15,8 +15,14 @@ pipeline {
     buildDiscarder(logRotator( daysToKeepStr: '', numToKeepStr: '1'))
   }
 
-
   stages{
+
+    stage("checkout"){
+      steps{
+        git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
+      }		
+    }
+
     stage("Build and deploy"){
       steps{
         echo "JAVA_HOME = ${JAVA_HOME}"
