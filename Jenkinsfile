@@ -15,8 +15,6 @@ pipeline {
     buildDiscarder(logRotator( daysToKeepStr: '', numToKeepStr: '1'))
   }
 
-  environment {
-  }
 
   stages{
     stage("Build and deploy"){
