@@ -31,8 +31,9 @@ pipeline {
 	echo "JAVA_HOME = ${JAVA_HOME}"
 //	dir ("helloworldgradlepipeline"){	
           sh 'ls -al'
-          sh 'gradle clean build '
-          sh 'gradle uploadArchives '	    
+	  sh 'gradle --version'	
+          sh 'gradle clean build --info'
+          sh 'gradle uploadArchives --info'	    
 //	}
       }
     }
