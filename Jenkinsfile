@@ -17,21 +17,23 @@ pipeline {
 
   stages{
 
+/*
     stage("checkout"){
       steps{
         git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
       }		
     }
+*/
 
     stage("Build and deploy"){
 	steps{
 	sh 'ls -al'	
 	echo "JAVA_HOME = ${JAVA_HOME}"
-	dir ("helloworldgradlepipeline"){	
+//	dir ("helloworldgradlepipeline"){	
           sh 'ls -al'
           sh 'gradle clean build '
           sh 'gradle uploadArchives '	    
-	}
+//	}
       }
     }
   }
