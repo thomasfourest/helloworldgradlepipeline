@@ -89,7 +89,10 @@ jar {
 uploadArchives {
     repositories {
        mavenDeployer {
-         repository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/") {
+         repository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/") {
+           authentication(userName: "itn-deployer", password: "21954971a9")
+         }
+		 snapshotRepository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/") {
            authentication(userName: "itn-deployer", password: "21954971a9")
          }
 //             pom.version = "1.0.O-SNAPSHOT"
