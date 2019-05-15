@@ -9,9 +9,17 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
-    id 'maven'
+// maven plugin will be deprecated
+//    id 'maven'
+// prefered maven-publish plugin 
+// usage : gradle build publish --info
+	id 'maven-publish'
     id 'net.nemerosa.versioning' version '2.6.1'
+// generate release	
+// usage : gradle release ...
     id 'net.researchgate.release' version '2.6.0'
+// generate pom
+	id 'ru.vyarus.pom' version '1.3.0'
     
 }
 
@@ -47,9 +55,11 @@ repositories {
     jcenter()
 
     mavenCentral()
+	
 //    maven {
 //	url "http://nexus.itnsa.net/content/groups/public/"
 //    }
+
 }
 
 dependencies {
@@ -67,11 +77,14 @@ dependencies {
     // Use JUnit test framework
     //testImplementation 'junit:junit:4.12'
     testImplementation 'junit:junit:4.+'
+	
 }
 
-//jar {
-//    baseName "package.name.of.jar"
-//}
+/*
+jar {
+    baseName "package.name.of.jar"
+}
+*/
 
 jar {
     manifest {
@@ -86,32 +99,38 @@ jar {
     }
 }
 
-/*
+/* 
+// maven plugin (versus maven-publish plugin)
 uploadArchives {
     repositories {
-//maven-publishing plugin	
-	  maven {
-        def releasesRepoUrl = "http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/"
-        def snapshotsRepoUrl = "http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/"
-        url version.endsWith("SNAPSHOT") ? snapshotsRepoUrl : releasesRepoUrl
-		credentials {
-          username = 'itn-deployer'
-          password = '21954971a9'
-        }
-      }
-// maven plugin 
-//       mavenDeployer {
-//         repository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/") {
-//           authentication(userName: "itn-deployer", password: "21954971a9")
-//         }
-//		 snapshotRepository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/") {
-//           authentication(userName: "itn-deployer", password: "21954971a9")
-//         }
-//       }
+ maven plugin 
+       mavenDeployer {
+         repository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/") {
+           authentication(userName: "itn-deployer", password: "21954971a9")
+         }
+		 snapshotRepository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/") {
+           authentication(userName: "itn-deployer", password: "21954971a9")
+         }
+       }
     }
 }
 */
 
+// for maven-publish plugin
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier 'sources'
+    from sourceSets.main.allJava
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+// maven-publish plugin
 publishing {
     repositories {
 	  maven {
@@ -137,11 +156,14 @@ publishing {
                 classifier "javadoc"
             }
         }
+		mavenJava(MavenPublication) {
+            from components.java
+        }
     }
 }
 
 // default configuration of the release plugin ofr gradle
-/*
+/* doesn't work : char&syntaxe problem
 release {
     failOnCommitNeeded = true
     failOnPublishNeeded = true
