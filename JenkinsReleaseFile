@@ -22,9 +22,6 @@ pipeline {
         deleteDir()
       }
     }
-  }
-    
-  stages{
 
 /*
     stage("checkout"){
