@@ -88,6 +88,17 @@ jar {
 
 uploadArchives {
     repositories {
+//maven-publishing plugin	
+	  maven {
+        def releasesRepoUrl = "http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/"
+        def snapshotsRepoUrl = "http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/"
+        url version.endsWith("SNAPSHOT") ? snapshotsRepoUrl : releasesRepoUrl
+		credentials {
+          username = 'itn-deployer'
+          password = '21954971a9'
+        }
+      }
+/* maven plugin 
        mavenDeployer {
          repository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/") {
            authentication(userName: "itn-deployer", password: "21954971a9")
@@ -95,10 +106,8 @@ uploadArchives {
 		 snapshotRepository(url: "http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/") {
            authentication(userName: "itn-deployer", password: "21954971a9")
          }
-//             pom.version = "1.0.O-SNAPSHOT"
-//             pom.artifactId = "helloworldgradlepipeline"
-//             pom.groupId = "com.devops"
        }
+*/
     }
 }
 
