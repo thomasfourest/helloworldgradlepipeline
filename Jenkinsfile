@@ -29,12 +29,9 @@ pipeline {
 	steps{
 	sh 'ls -al'	
 	echo "JAVA_HOME = ${JAVA_HOME}"
-//	dir ("helloworldgradlepipeline"){	
           sh 'ls -al'
-	  sh 'gradle --version'	
-          sh 'gradle clean build --info'
-          sh 'gradle uploadArchives --info'	    
-//	}
+	      sh 'gradle --version'	
+          sh 'gradle clean build publish --info'	    
       }
     }
   }

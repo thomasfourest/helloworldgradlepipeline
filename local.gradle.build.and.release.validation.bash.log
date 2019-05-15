@@ -8,262 +8,10 @@ tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
 $ ${GRADLE_HOME}/bin/gradle init --type java-library --project-name jvm-library
 
 tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
-$ ./gradlew build --info
-Initialized native services in: C:\Users\tft\.gradle\native
-The client will now receive all logging from the daemon (pid: 7504). The daemon log file: C:\Users\tft\.gradle\daemon\5.3.1\daemon-7504.out.loging to Daemon
-Starting 15th build in daemon [uptime: 5 hrs 6 mins 23.006 secs, performance: 99%, non-heap usage: 23% of 268,4 MB]
-Using 8 worker leases.
-Starting Build
-Settings evaluated using settings file 'C:\Users\tft\Desktop\helloworldgradlepipeline\settings.gradle'.
-Projects loaded. Root project using build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle'.
-Included projects: [root project 'helloworldgradlepipeline']
-
-> Configure project :
-Evaluating root project 'helloworldgradlepipeline' using build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle'.
-Compiling build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle' using SubsetScriptTransformer.
-Compiling build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle' using BuildScriptTransformer.
-All projects evaluated.
-Selected primary task 'build' from project :
-Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':build']
-:compileJava (Thread[Execution worker for ':',5,main]) started.
-
-> Task :compileJava
-Task ':compileJava' is not up-to-date because:
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\main has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\main\com has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\main\com\devops has been removed.
-All input files are considered out-of-date for incremental task ':compileJava'.
-Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
-Compiling with JDK Java compiler API.
-Created classpath snapshot for incremental compilation in 0.001 secs.
-:compileJava (Thread[Execution worker for ':',5,main]) completed. Took 0.124 secs.
-:processResources (Thread[Execution worker for ':',5,main]) started.
-
-> Task :processResources
-Task ':processResources' is not up-to-date because:
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\resources\main has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\resources\main\log4j.properties has been removed.
-:processResources (Thread[Execution worker for ':',5,main]) completed. Took 0.009 secs.
-:classes (Thread[Execution worker for ':',5,main]) started.
-
-> Task :classes
-Skipping task ':classes' as it has no actions.
-:classes (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
-:jar (Thread[Execution worker for ':',5,main]) started.
-
-> Task :jar
-Task ':jar' is not up-to-date because:
-  Output property 'archiveFile' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.0.jar has been removed.
-:jar (Thread[Execution worker for ':',5,main]) completed. Took 0.014 secs.
-:assemble (Thread[Execution worker for ':',5,main]) started.
-
-> Task :assemble
-Skipping task ':assemble' as it has no actions.
-:assemble (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
-:compileTestJava (Thread[Execution worker for ':',5,main]) started.
-
-> Task :compileTestJava
-Task ':compileTestJava' is not up-to-date because:
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\test has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\test\com has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\test\com\devops has been removed.
-All input files are considered out-of-date for incremental task ':compileTestJava'.
-Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
-Compiling with JDK Java compiler API.
-Created classpath snapshot for incremental compilation in 0.003 secs.
-:compileTestJava (Thread[Execution worker for ':',5,main]) completed. Took 0.113 secs.
-:processTestResources (Thread[Execution worker for ':',5,main]) started.
-
-> Task :processTestResources
-Task ':processTestResources' is not up-to-date because:
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\resources\test has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\resources\test\log4j.properties has been removed.
-:processTestResources (Thread[Execution worker for ':',5,main]) completed. Took 0.008 secs.
-:testClasses (Thread[Execution worker for ':',5,main]) started.
-
-> Task :testClasses
-Skipping task ':testClasses' as it has no actions.
-:testClasses (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
-:test (Thread[Execution worker for ':',5,main]) started.
-Gradle Test Executor 8 started executing tests.
-Gradle Test Executor 8 finished executing tests.
-
-> Task :test
-Task ':test' is not up-to-date because:
-  Output property 'binResultsDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\test-results\test\binary has been removed.
-  Output property 'binResultsDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\test-results\test\binary\output.bin has been removed.
-  Output property 'binResultsDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\test-results\test\binary\output.bin.idx has been removed.
-Starting process 'Gradle Test Executor 8'. Working directory: C:\Users\tft\Desktop\helloworldgradlepipeline Command: C:\Program Files\Java\jdk1.8.0_201\bin\java.exe -Djava.security.manager=worker.org.gradle.process.internal.worker.child.BootstrapSecurityManager -Dorg.gradle.native=false -Xmx512m -Dfile.encoding=windows-1252 -Duser.country=FR -Duser.language=fr -Duser.variant -ea -cp C:\Users\tft\.gradle\caches\5.3.1\workerMain\gradle-worker.jar worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 8'
-Successfully started process 'Gradle Test Executor 8'
-
-com.devops.MyHelloTest > testRunMe STANDARD_OUT
-    2019-04-16 16:59:25 DEBUG MyHello:22 - This is debug : Hello
-    2019-04-16 16:59:25 INFO  MyHello:26 - This is info : Hello
-    2019-04-16 16:59:25 WARN  MyHello:29 - This is warn : Hello
-    2019-04-16 16:59:25 ERROR MyHello:30 - This is fake error : Hello
-    2019-04-16 16:59:25 FATAL MyHello:31 - This is fake fatal : Hello
-Finished generating test XML results (0.001 secs) into: C:\Users\tft\Desktop\helloworldgradlepipeline\build\test-results\test
-Generating HTML test report...
-Finished generating test html results (0.008 secs) into: C:\Users\tft\Desktop\helloworldgradlepipeline\build\reports\tests\test
-:test (Thread[Execution worker for ':',5,main]) completed. Took 1.041 secs.
-:check (Thread[Execution worker for ':',5,main]) started.
-
-> Task :check
-Skipping task ':check' as it has no actions.
-:check (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
-:build (Thread[Execution worker for ':',5,main]) started.
-
-> Task :build
-Skipping task ':build' as it has no actions.
-:build (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
-
-BUILD SUCCESSFUL in 2s
-6 actionable tasks: 6 executed
-
-./gradlew uploadArchives --info
-Initialized native services in: C:\Users\tft\.gradle\native
-The client will now receive all logging from the daemon (pid: 7504). The daemon log file: C:\Users\tft\.gradle\daemon\5.3.1\daemon-7504.out.log
-Starting 16th build in daemon [uptime: 5 hrs 6 mins 36.678 secs, performance: 99%, non-heap usage: 23% of 268,4 MB]
-Using 8 worker leases.
-Starting Build
-Settings evaluated using settings file 'C:\Users\tft\Desktop\helloworldgradlepipeline\settings.gradle'.
-Projects loaded. Root project using build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle'.
-Included projects: [root project 'helloworldgradlepipeline']
-
-> Configure project :
-Evaluating root project 'helloworldgradlepipeline' using build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle'.
-All projects evaluated.
-Selected primary task 'uploadArchives' from project :
-Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':uploadArchives']
-:compileJava (Thread[Execution worker for ':',5,main]) started.
-
-> Task :compileJava UP-TO-DATE
-Skipping task ':compileJava' as it is up-to-date.
-:compileJava (Thread[Execution worker for ':',5,main]) completed. Took 0.02 secs.
-:processResources (Thread[Execution worker for ':',5,main]) started.
-
-> Task :processResources UP-TO-DATE
-Skipping task ':processResources' as it is up-to-date.
-:processResources (Thread[Execution worker for ':',5,main]) completed. Took 0.002 secs.
-:classes (Thread[Execution worker for ':',5,main]) started.
-
-> Task :classes UP-TO-DATE
-Skipping task ':classes' as it has no actions.
-:classes (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
-:jar (Thread[Execution worker for ':',5,main]) started.
-
-> Task :jar
-Task ':jar' is not up-to-date because:
-  Input property 'rootSpec$2$1' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\tmp\jar\MANIFEST.MF has changed.
-:jar (Thread[Execution worker for ':',5,main]) completed. Took 0.01 secs.
-:uploadArchives (Thread[Execution worker for ':',5,main]) started.
-
-> Task :uploadArchives
-Task ':uploadArchives' is not up-to-date because:
-  Task has not declared any outputs despite executing actions.
-Publishing configuration: configuration ':archives'
-Publishing to org.gradle.api.publication.maven.internal.deployer.DefaultGroovyMavenDeployer@6de5fdc6
-Deploying to http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Downloading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Could not find metadata com.devops:helloworldgradlepipeline:1.0.0-SNAPSHOT/maven-metadata.xml in remote (http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/)
-Uploading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/helloworldgradlepipeline-1.0.0-20190416.145938-1.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 2K from remote
-Uploaded 2K
-Uploading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/helloworldgradlepipeline-1.0.0-20190416.145938-1.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 1K from remote
-Uploaded 1K
-Downloading: com/devops/helloworldgradlepipeline/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Could not find metadata com.devops:helloworldgradlepipeline/maven-metadata.xml in remote (http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/)
-Uploading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 1K from remote
-Uploaded 1K
-Uploading: com/devops/helloworldgradlepipeline/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 0K from remote
-Uploaded 0K
-:uploadArchives (Thread[Execution worker for ':',5,main]) completed. Took 1.893 secs.
-
-BUILD SUCCESSFUL in 3s
-4 actionable tasks: 2 executed, 2 up-to-date
-
-./gradlew uploadArchives --info
-Initialized native services in: C:\Users\tft\.gradle\native
-The client will now receive all logging from the daemon (pid: 7504). The daemon log file: C:\Users\tft\.gradle\daemon\5.3.1\daemon-7504.out.log
-Starting 17th build in daemon [uptime: 5 hrs 8 mins 41.14 secs, performance: 99%, non-heap usage: 25% of 268,4 MB]
-Using 8 worker leases.
-Starting Build
-Settings evaluated using settings file 'C:\Users\tft\Desktop\helloworldgradlepipeline\settings.gradle'.
-Projects loaded. Root project using build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle'.
-Included projects: [root project 'helloworldgradlepipeline']
-
-> Configure project :
-Evaluating root project 'helloworldgradlepipeline' using build file 'C:\Users\tft\Desktop\helloworldgradlepipeline\build.gradle'.
-All projects evaluated.
-Selected primary task 'uploadArchives' from project :
-Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':uploadArchives']
-:compileJava (Thread[Execution worker for ':',5,main]) started.
-
-> Task :compileJava
-Task ':compileJava' is not up-to-date because:
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\main has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\main\com has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\classes\java\main\com\devops has been removed.
-All input files are considered out-of-date for incremental task ':compileJava'.
-Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
-Compiling with JDK Java compiler API.
-Created classpath snapshot for incremental compilation in 0.001 secs.
-:compileJava (Thread[Execution worker for ':',5,main]) completed. Took 0.105 secs.
-:processResources (Thread[Execution worker for ':',5,main]) started.
-
-> Task :processResources
-Task ':processResources' is not up-to-date because:
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\resources\main has been removed.
-  Output property 'destinationDir' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\resources\main\log4j.properties has been removed.
-:processResources (Thread[Execution worker for ':',5,main]) completed. Took 0.006 secs.
-:classes (Thread[Execution worker for ':',5,main]) started.
-
-> Task :classes
-Skipping task ':classes' as it has no actions.
-:classes (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
-:jar (Thread[Execution worker for ':',5,main]) started.
-
-> Task :jar
-Task ':jar' is not up-to-date because:
-  Output property 'archiveFile' file C:\Users\tft\Desktop\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.0-SNAPSHOT.jar has been removed.
-:jar (Thread[Execution worker for ':',5,main]) completed. Took 0.013 secs.
-:uploadArchives (Thread[Execution worker for ':',5,main]) started.
-
-> Task :uploadArchives
-Task ':uploadArchives' is not up-to-date because:
-  Task has not declared any outputs despite executing actions.
-Publishing configuration: configuration ':archives'
-Publishing to org.gradle.api.publication.maven.internal.deployer.DefaultGroovyMavenDeployer@3231a02c
-Deploying to http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Downloading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 1K from remote
-Uploading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/helloworldgradlepipeline-1.0.0-20190416.150142-2.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 2K from remote
-Uploaded 2K
-Uploading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/helloworldgradlepipeline-1.0.0-20190416.150142-2.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 1K from remote
-Uploaded 1K
-Downloading: com/devops/helloworldgradlepipeline/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 0K from remote
-Uploading: com/devops/helloworldgradlepipeline/1.0.0-SNAPSHOT/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 1K from remote
-Uploaded 1K
-Uploading: com/devops/helloworldgradlepipeline/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Transferring 0K from remote
-Uploaded 0K
-:uploadArchives (Thread[Execution worker for ':',5,main]) completed. Took 1.124 secs.
-
-BUILD SUCCESSFUL in 2s
-4 actionable tasks: 4 executed
-
-tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
 $ $GRADLE_HOME/bin/gradle clean build publish --info
 Initialized native services in: C:\Users\tft\.gradle\native
-The client will now receive all logging from the daemon (pid: 5952). The daemon log file: C:\Users\tft\.gradle\daemon\5.3.1\daemon-5952.out.log
-Starting 14th build in daemon [uptime: 1 hrs 35 mins 33.794 secs, performance: 99%, non-heap usage: 27% of 268,4 MB]
+The client will now receive all logging from the daemon (pid: 24080). The daemon log file: C:\Users\tft\.gradle\daemon\5.3.1\daemon-24080.out.log
+Starting 6th build in daemon [uptime: 18 mins 41.853 secs, performance: 99%, non-heap usage: 25% of 268,4 MB]
 Using 8 worker leases.
 Starting Build
 Settings evaluated using settings file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\settings.gradle'.
@@ -279,13 +27,13 @@ All projects evaluated.
 Selected primary task 'clean' from project :
 Selected primary task 'build' from project :
 Selected primary task 'publish' from project :
-Tasks to be executed: [task ':clean', task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':javadoc', task ':javadocJar', task ':sourcesJar', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':build', task ':generatePomFileForApiPublication', task ':publishApiPublicationToMavenRepository', task ':generatePomFileForMavenJavaPublication', task ':publishMavenJavaPublicationToMavenRepository', task ':publish']
+Tasks to be executed: [task ':clean', task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':javadoc', task ':javadocJar', task ':sourcesJar', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':build', task ':generatePomFileForApiPublication', task ':publishApiPublicationToMavenRepository', task ':publish']
 :clean (Thread[Execution worker for ':',5,main]) started.
 
-> Task :clean UP-TO-DATE
+> Task :clean
 Task ':clean' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-:clean (Thread[Execution worker for ':',5,main]) completed. Took 0.003 secs.
+:clean (Thread[Execution worker for ':',5,main]) completed. Took 0.141 secs.
 :compileJava (Thread[Execution worker for ':',5,main]) started.
 
 > Task :compileJava
@@ -297,14 +45,14 @@ All input files are considered out-of-date for incremental task ':compileJava'.
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
 Compiling with JDK Java compiler API.
 Created classpath snapshot for incremental compilation in 0.003 secs.
-:compileJava (Thread[Execution worker for ':',5,main]) completed. Took 0.163 secs.
+:compileJava (Thread[Execution worker for ':',5,main]) completed. Took 0.294 secs.
 :processResources (Thread[Execution worker for ':',5,main]) started.
 
 > Task :processResources
 Task ':processResources' is not up-to-date because:
   Output property 'destinationDir' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\resources\main has been removed.
   Output property 'destinationDir' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\resources\main\log4j.properties has been removed.
-:processResources (Thread[Execution worker for ':',5,main]) completed. Took 0.01 secs.
+:processResources (Thread[Execution worker for ':',5,main]) completed. Took 0.019 secs.
 :classes (Thread[Execution worker for ':',5,main]) started.
 
 > Task :classes
@@ -314,8 +62,8 @@ Skipping task ':classes' as it has no actions.
 
 > Task :jar
 Task ':jar' is not up-to-date because:
-  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.5-SNAPSHOT.jar has been removed.
-:jar (Thread[Execution worker for ':',5,main]) completed. Took 0.016 secs.
+  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.9-SNAPSHOT.jar has been removed.
+:jar (Thread[Execution worker for ':',5,main]) completed. Took 0.049 secs.
 :javadoc (Thread[Execution worker for ':',5,main]) started.
 
 > Task :javadoc
@@ -325,19 +73,19 @@ Task ':javadoc' is not up-to-date because:
   Output property 'outputDirectory' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\docs\javadoc\allclasses-noframe.html has been removed.
 Starting process 'command 'C:\Program Files\Java\jdk1.8.0_201\bin\javadoc.exe''. Working directory: C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline Command: C:\Program Files\Java\jdk1.8.0_201\bin\javadoc.exe @C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\tmp\javadoc\javadoc.options
 Successfully started process 'command 'C:\Program Files\Java\jdk1.8.0_201\bin\javadoc.exe''
-:javadoc (Thread[Execution worker for ':',5,main]) completed. Took 0.772 secs.
+:javadoc (Thread[Execution worker for ':',5,main]) completed. Took 1.556 secs.
 :javadocJar (Thread[Execution worker for ':',5,main]) started.
 
 > Task :javadocJar
 Task ':javadocJar' is not up-to-date because:
-  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.5-SNAPSHOT-javadoc.jar has been removed.
-:javadocJar (Thread[Execution worker for ':',5,main]) completed. Took 0.022 secs.
+  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.9-SNAPSHOT-javadoc.jar has been removed.
+:javadocJar (Thread[Execution worker for ':',5,main]) completed. Took 0.041 secs.
 :sourcesJar (Thread[Execution worker for ':',5,main]) started.
 
 > Task :sourcesJar
 Task ':sourcesJar' is not up-to-date because:
-  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.5-SNAPSHOT-sources.jar has been removed.
-:sourcesJar (Thread[Execution worker for ':',5,main]) completed. Took 0.013 secs.
+  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.9-SNAPSHOT-sources.jar has been removed.
+:sourcesJar (Thread[Execution worker for ':',5,main]) completed. Took 0.028 secs.
 :assemble (Thread[Execution worker for ':',5,main]) started.
 
 > Task :assemble
@@ -353,23 +101,21 @@ Task ':compileTestJava' is not up-to-date because:
 All input files are considered out-of-date for incremental task ':compileTestJava'.
 Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
 Compiling with JDK Java compiler API.
-Created classpath snapshot for incremental compilation in 0.003 secs.
-:compileTestJava (Thread[Execution worker for ':',5,main]) completed. Took 0.115 secs.
+Created classpath snapshot for incremental compilation in 0.004 secs.
+:compileTestJava (Thread[Execution worker for ':',5,main]) completed. Took 0.203 secs.
 :processTestResources (Thread[Execution worker for ':',5,main]) started.
 
 > Task :processTestResources
 Task ':processTestResources' is not up-to-date because:
   Output property 'destinationDir' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\resources\test has been removed.
   Output property 'destinationDir' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\resources\test\log4j.properties has been removed.
-:processTestResources (Thread[Execution worker for ':',5,main]) completed. Took 0.009 secs.
+:processTestResources (Thread[Execution worker for ':',5,main]) completed. Took 0.026 secs.
 :testClasses (Thread[Execution worker for ':',5,main]) started.
 
 > Task :testClasses
 Skipping task ':testClasses' as it has no actions.
 :testClasses (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
 :test (Thread[Execution worker for ':',5,main]) started.
-Gradle Test Executor 5 started executing tests.
-Gradle Test Executor 5 finished executing tests.
 
 > Task :test
 Task ':test' is not up-to-date because:
@@ -379,16 +125,21 @@ Task ':test' is not up-to-date because:
 Starting process 'Gradle Test Executor 5'. Working directory: C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline Command: C:\Program Files\Java\jdk1.8.0_201\bin\java.exe -Djava.security.manager=worker.org.gradle.process.internal.worker.child.BootstrapSecurityManager -Dorg.gradle.native=false -Xmx512m -Dfile.encoding=windows-1252 -Duser.country=FR -Duser.language=fr -Duser.variant -ea -cp C:\Users\tft\.gradle\caches\5.3.1\workerMain\gradle-worker.jar worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 5'
 Successfully started process 'Gradle Test Executor 5'
 
+Gradle Test Executor 5 started executing tests.
+Gradle Test Executor 5 finished executing tests.
+
+> Task :test
+
 com.devops.MyHelloTest > testRunMe STANDARD_OUT
-    2019-05-15 16:15:18 DEBUG MyHello:22 - This is debug : Hello
-    2019-05-15 16:15:18 INFO  MyHello:26 - This is info : Hello
-    2019-05-15 16:15:18 WARN  MyHello:29 - This is warn : Hello
-    2019-05-15 16:15:18 ERROR MyHello:30 - This is fake error : Hello
-    2019-05-15 16:15:18 FATAL MyHello:31 - This is fake fatal : Hello
+    2019-05-15 23:08:55 DEBUG MyHello:22 - This is debug : Hello
+    2019-05-15 23:08:55 INFO  MyHello:26 - This is info : Hello
+    2019-05-15 23:08:55 WARN  MyHello:29 - This is warn : Hello
+    2019-05-15 23:08:55 ERROR MyHello:30 - This is fake error : Hello
+    2019-05-15 23:08:55 FATAL MyHello:31 - This is fake fatal : Hello
 Finished generating test XML results (0.002 secs) into: C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\test-results\test
 Generating HTML test report...
-Finished generating test html results (0.007 secs) into: C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\reports\tests\test
-:test (Thread[Execution worker for ':',5,main]) completed. Took 1.579 secs.
+Finished generating test html results (0.013 secs) into: C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\reports\tests\test
+:test (Thread[Execution worker for ':',5,main]) completed. Took 2.748 secs.
 :check (Thread[Execution worker for ':',5,main]) started.
 
 > Task :check
@@ -404,7 +155,7 @@ Skipping task ':build' as it has no actions.
 > Task :generatePomFileForApiPublication
 Task ':generatePomFileForApiPublication' is not up-to-date because:
   Task.upToDateWhen is false.
-:generatePomFileForApiPublication (Thread[Execution worker for ':',5,main]) completed. Took 0.135 secs.
+:generatePomFileForApiPublication (Thread[Execution worker for ':',5,main]) completed. Took 0.013 secs.
 :publishApiPublicationToMavenRepository (Thread[Execution worker for ':',5,main]) started.
 
 > Task :publishApiPublicationToMavenRepository
@@ -412,46 +163,428 @@ Task ':publishApiPublicationToMavenRepository' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
 Publishing to repository 'maven' (http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/)
 Deploying to http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Downloading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/helloworldgradlepipeline-1.0.5-20190515.141519-2.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/helloworldgradlepipeline-1.0.5-20190515.141519-2.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/helloworldgradlepipeline-1.0.5-20190515.141519-2-sources.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/helloworldgradlepipeline-1.0.5-20190515.141519-2-javadoc.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Downloading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.210856-8.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.210856-8.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.210856-8-sources.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.210856-8-javadoc.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
 Downloading: com/devops/helloworldgradlepipeline/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
 Uploading: com/devops/helloworldgradlepipeline/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-:publishApiPublicationToMavenRepository (Thread[Execution worker for ':',5,main]) completed. Took 1.695 secs.
-:generatePomFileForMavenJavaPublication (Thread[Execution worker for ':',5,main]) started.
-
-> Task :generatePomFileForMavenJavaPublication
-Task ':generatePomFileForMavenJavaPublication' is not up-to-date because:
-  Task.upToDateWhen is false.
-:generatePomFileForMavenJavaPublication (Thread[Execution worker for ':',5,main]) completed. Took 0.009 secs.
-:publishMavenJavaPublicationToMavenRepository (Thread[Execution worker for ':',5,main]) started.
-
-> Task :publishMavenJavaPublicationToMavenRepository
-Task ':publishMavenJavaPublicationToMavenRepository' is not up-to-date because:
-  Task has not declared any outputs despite executing actions.
-Publishing to repository 'maven' (http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/)
-Deploying to http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Downloading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/helloworldgradlepipeline-1.0.5-20190515.141520-3.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/helloworldgradlepipeline-1.0.5-20190515.141520-3.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Downloading: com/devops/helloworldgradlepipeline/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/1.0.5-SNAPSHOT/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-Uploading: com/devops/helloworldgradlepipeline/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
-:publishMavenJavaPublicationToMavenRepository (Thread[Execution worker for ':',5,main]) completed. Took 0.857 secs.
+:publishApiPublicationToMavenRepository (Thread[Execution worker for ':',5,main]) completed. Took 1.874 secs.
 :publish (Thread[Execution worker for ':',5,main]) started.
 
 > Task :publish
 Skipping task ':publish' as it has no actions.
 :publish (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
 
-BUILD SUCCESSFUL in 8s
-14 actionable tasks: 13 executed, 1 up-to-date
+BUILD SUCCESSFUL in 11s
+12 actionable tasks: 12 executed
 
 tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
+$ git add .
+warning: LF will be replaced by CRLF in build.gradle.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in settings.gradle.
+The file will have its original line endings in your working directory
 
+tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
+$ git commit -m "debug double publishing : desable the publishMavenJavaPublicationToMavenRepository"
+[master c9f078a] debug double publishing : desable the publishMavenJavaPublicationToMavenRepository
+ Committer: Thomas FOUREST <TFT@itnsa.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 655 bytes | 131.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/thomasfourest/helloworldgradlepipeline.git
+   130a450..c9f078a  master -> master
+
+tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
+$ ${GRADLE_HOME}/bin/gradle release publish -Prelease.useAutomaticVersion=true --info
+Initialized native services in: C:\Users\tft\.gradle\native
+The client will now receive all logging from the daemon (pid: 24080). The daemon log file: C:\Users\tft\.gradle\daemon\5.3.1\daemon-24080.out.log
+Starting 7th build in daemon [uptime: 26 mins 45.488 secs, performance: 99%, non-heap usage: 26% of 268,4 MB]
+Using 8 worker leases.
+Starting Build
+Compiling settings file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\settings.gradle' using SubsetScriptTransformer.
+Compiling settings file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\settings.gradle' using BuildScriptTransformer.
+Settings evaluated using settings file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build.gradle'.
+Included projects: [root project 'helloworldgradlepipeline']
+
+> Configure project :
+Evaluating root project 'helloworldgradlepipeline' using build file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build.gradle'.
+Compiling build file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build.gradle' using SubsetScriptTransformer.
+Compiling build file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build.gradle' using BuildScriptTransformer.
+All projects evaluated.
+Selected primary task 'release' from project :
+Selected primary task 'publish' from project :
+Tasks to be executed: [task ':release', task ':generatePomFileForApiPublication', task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':javadoc', task ':javadocJar', task ':sourcesJar', task ':publishApiPublicationToMavenRepository', task ':publish']
+:release (Thread[Execution worker for ':',5,main]) started.
+:generatePomFileForApiPublication (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :generatePomFileForApiPublication
+Task ':generatePomFileForApiPublication' is not up-to-date because:
+  Task.upToDateWhen is false.
+:generatePomFileForApiPublication (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.02 secs.
+:compileJava (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :compileJava UP-TO-DATE
+Skipping task ':compileJava' as it is up-to-date.
+:compileJava (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.081 secs.
+:processResources (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :processResources UP-TO-DATE
+Skipping task ':processResources' as it is up-to-date.
+:processResources (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.007 secs.
+:classes (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+:classes (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.0 secs.
+:jar (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :jar
+Task ':jar' is not up-to-date because:
+  Input property 'rootSpec$2$1' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\tmp\jar\MANIFEST.MF has changed.
+:jar (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.035 secs.
+:javadoc (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :javadoc UP-TO-DATE
+Skipping task ':javadoc' as it is up-to-date.
+:javadoc (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.015 secs.
+:javadocJar (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :javadocJar UP-TO-DATE
+Skipping task ':javadocJar' as it is up-to-date.
+:javadocJar (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.008 secs.
+:sourcesJar (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :sourcesJar UP-TO-DATE
+Skipping task ':sourcesJar' as it is up-to-date.
+:sourcesJar (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.012 secs.
+:publishApiPublicationToMavenRepository (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :release
+Task ':release' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+
+> Task :publishApiPublicationToMavenRepository
+Task ':publishApiPublicationToMavenRepository' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Publishing to repository 'maven' (http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/)
+Deploying to http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Downloading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.211655-9.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.211655-9.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.211655-9-sources.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/helloworldgradlepipeline-1.0.9-20190515.211655-9-javadoc.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Downloading: com/devops/helloworldgradlepipeline/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9-SNAPSHOT/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+Uploading: com/devops/helloworldgradlepipeline/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/
+:publishApiPublicationToMavenRepository (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 1.902 secs.
+:publish (Thread[Execution worker for ':' Thread 7,5,main]) started.
+
+> Task :publish
+Skipping task ':publish' as it has no actions.
+:publish (Thread[Execution worker for ':' Thread 7,5,main]) completed. Took 0.0 secs.
+
+> Configure project :helloworldgradlepipeline
+Evaluating project ':helloworldgradlepipeline' using build file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build.gradle'.
+:helloworldgradlepipeline:createScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:createScmAdapter
+Task ':helloworldgradlepipeline:createScmAdapter' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:createScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.052 secs.
+:helloworldgradlepipeline:initScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:initScmAdapter
+Task ':helloworldgradlepipeline:initScmAdapter' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, branch, --no-color] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, branch, --no-color] produced output: [* master]
+:helloworldgradlepipeline:initScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.203 secs.
+:helloworldgradlepipeline:checkCommitNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:checkCommitNeeded
+Task ':helloworldgradlepipeline:checkCommitNeeded' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, status, --porcelain] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, status, --porcelain] produced output: []
+:helloworldgradlepipeline:checkCommitNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.127 secs.
+:helloworldgradlepipeline:checkUpdateNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:checkUpdateNeeded
+Task ':helloworldgradlepipeline:checkUpdateNeeded' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, remote, update] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, remote, update] produced output: [Fetching origin]
+Running [git, status, --porcelain, -b] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, status, --porcelain, -b] produced output: [## master...origin/master]
+:helloworldgradlepipeline:checkUpdateNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 1.487 secs.
+:helloworldgradlepipeline:unSnapshotVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :release
+Selected primary task ':createScmAdapter' from project :
+Selected primary task ':initScmAdapter' from project :
+Selected primary task ':checkCommitNeeded' from project :
+Selected primary task ':checkUpdateNeeded' from project :
+Selected primary task ':unSnapshotVersion' from project :
+Selected primary task ':confirmReleaseVersion' from project :
+Selected primary task ':checkSnapshotDependencies' from project :
+Selected primary task ':runBuildTasks' from project :
+Selected primary task ':preTagCommit' from project :
+Selected primary task ':createReleaseTag' from project :
+Selected primary task ':updateVersion' from project :
+Selected primary task ':commitNewVersion' from project :
+
+> Task :helloworldgradlepipeline:unSnapshotVersion
+Task ':helloworldgradlepipeline:unSnapshotVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:unSnapshotVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.327 secs.
+:helloworldgradlepipeline:confirmReleaseVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:confirmReleaseVersion
+Task ':helloworldgradlepipeline:confirmReleaseVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:confirmReleaseVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.003 secs.
+:helloworldgradlepipeline:checkSnapshotDependencies (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:checkSnapshotDependencies
+Task ':helloworldgradlepipeline:checkSnapshotDependencies' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:checkSnapshotDependencies (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.016 secs.
+:helloworldgradlepipeline:runBuildTasks (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Configure project :helloworldgradlepipeline:helloworldgradlepipeline
+Evaluating project ':helloworldgradlepipeline:helloworldgradlepipeline' using build file 'C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build.gradle'.
+[versioning] WARNING - the working copy has unstaged or uncommitted changes.
+:helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.003 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:compileJava UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:compileJava' as it is up-to-date.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.04 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:processResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:processResources UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:processResources' as it is up-to-date.
+:helloworldgradlepipeline:helloworldgradlepipeline:processResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.009 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:classes (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:classes UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:classes' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:classes (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:jar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:jar
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:jar' is not up-to-date because:
+  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.9-SNAPSHOT.jar has been removed.
+:helloworldgradlepipeline:helloworldgradlepipeline:jar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.035 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:javadoc (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:runBuildTasks
+Task ':helloworldgradlepipeline:runBuildTasks' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Selected primary task ':beforeReleaseBuild' from project :
+Selected primary task ':build' from project :
+Selected primary task ':afterReleaseBuild' from project :
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:javadoc
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:javadoc' is not up-to-date because:
+  Value of input property 'title' has changed for task ':helloworldgradlepipeline:helloworldgradlepipeline:javadoc'
+Starting process 'command 'C:\Program Files\Java\jdk1.8.0_201\bin\javadoc.exe''. Working directory: C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline Command: C:\Program Files\Java\jdk1.8.0_201\bin\javadoc.exe @C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\tmp\javadoc\javadoc.options
+Successfully started process 'command 'C:\Program Files\Java\jdk1.8.0_201\bin\javadoc.exe''
+:helloworldgradlepipeline:helloworldgradlepipeline:javadoc (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 1.637 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:javadocJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:javadocJar
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:javadocJar' is not up-to-date because:
+  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.9-SNAPSHOT-javadoc.jar has been removed.
+:helloworldgradlepipeline:helloworldgradlepipeline:javadocJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.051 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar' is not up-to-date because:
+  Output property 'archiveFile' file C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline\build\libs\helloworldgradlepipeline-1.0.9-SNAPSHOT-sources.jar has been removed.
+:helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.027 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:assemble (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:assemble
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:assemble' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:assemble (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava' as it is up-to-date.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.032 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:processTestResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:processTestResources UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:processTestResources' as it is up-to-date.
+:helloworldgradlepipeline:helloworldgradlepipeline:processTestResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.006 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:testClasses (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:testClasses UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:testClasses' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:testClasses (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:test (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:test UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:test' as it is up-to-date.
+:helloworldgradlepipeline:helloworldgradlepipeline:test (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.018 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:check (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:check UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:check' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:check (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:build (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:build
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:build' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:build (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication' is not up-to-date because:
+  Task.upToDateWhen is false.
+:helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.01 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Publishing to repository 'maven' (http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/)
+Deploying to http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9/helloworldgradlepipeline-1.0.9.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9/helloworldgradlepipeline-1.0.9.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9/helloworldgradlepipeline-1.0.9-sources.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.9/helloworldgradlepipeline-1.0.9-javadoc.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Downloading: com/devops/helloworldgradlepipeline/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+:helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 1.696 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:publish (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:publish
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:publish' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:publish (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:runBuildTasks (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 3.941 secs.
+:helloworldgradlepipeline:preTagCommit (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:preTagCommit
+Task ':helloworldgradlepipeline:preTagCommit' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, commit, -m, [Gradle Release Plugin] - pre tag commit:  '1.0.9'., -a] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, commit, -m, [Gradle Release Plugin] - pre tag commit:  '1.0.9'., -a] produced output: [[master cd5477b] [Gradle Release Plugin] - pre tag commit:  '1.0.9'.
+ Committer: Thomas FOUREST <TFT@itnsa.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)]
+Running [git, remote] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, remote] produced output: [origin]
+Running [git, branch, --no-color] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, branch, --no-color] produced output: [* master]
+Running [git, push, --porcelain, origin, master] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, push, --porcelain, origin, master] produced output: [To https://github.com/thomasfourest/helloworldgradlepipeline.git
+        refs/heads/master:refs/heads/master     c9f078a..cd5477b
+Done]
+:helloworldgradlepipeline:preTagCommit (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 7.223 secs.
+:helloworldgradlepipeline:createReleaseTag (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:createReleaseTag
+Task ':helloworldgradlepipeline:createReleaseTag' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, tag, -a, 1.0.9, -m, [Gradle Release Plugin] - creating tag:  '1.0.9'.] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, tag, -a, 1.0.9, -m, [Gradle Release Plugin] - creating tag:  '1.0.9'.] produced output: []
+Running [git, remote] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, remote] produced output: [origin]
+Running [git, push, --porcelain, origin, 1.0.9] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, push, --porcelain, origin, 1.0.9] produced output: [To https://github.com/thomasfourest/helloworldgradlepipeline.git
+*       refs/tags/1.0.9:refs/tags/1.0.9 [new tag]
+Done]
+:helloworldgradlepipeline:createReleaseTag (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 6.73 secs.
+:helloworldgradlepipeline:updateVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:updateVersion
+Task ':helloworldgradlepipeline:updateVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:updateVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.029 secs.
+:helloworldgradlepipeline:commitNewVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:commitNewVersion
+Task ':helloworldgradlepipeline:commitNewVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, commit, -m, [Gradle Release Plugin] - new version commit:  '1.0.10-SNAPSHOT'., -a] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, commit, -m, [Gradle Release Plugin] - new version commit:  '1.0.10-SNAPSHOT'., -a] produced output: [[master 9229db3] [Gradle Release Plugin] - new version commit:  '1.0.10-SNAPSHOT'.
+ Committer: Thomas FOUREST <TFT@itnsa.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)]
+Running [git, remote] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, remote] produced output: [origin]
+Running [git, branch, --no-color] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, branch, --no-color] produced output: [* master]
+Running [git, push, --porcelain, origin, master] in [C:\Users\tft\Desktop\airforceone\helloworldgradlepipeline]
+Running [git, push, --porcelain, origin, master] produced output: [To https://github.com/thomasfourest/helloworldgradlepipeline.git
+        refs/heads/master:refs/heads/master     cd5477b..9229db3
+Done]
+:helloworldgradlepipeline:commitNewVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 6.729 secs.
+:release (Thread[Execution worker for ':',5,main]) completed. Took 29.07 secs.
+
+BUILD SUCCESSFUL in 34s
+9 actionable tasks: 4 executed, 5 up-to-date
+
+tft@gfi502281 MINGW64 ~/Desktop/airforceone/helloworldgradlepipeline (master)
+$
 
 
 
