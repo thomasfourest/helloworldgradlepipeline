@@ -25,6 +25,7 @@ pipeline {
 
     stage("checkout"){
       steps{
+// checkouting in the job root directory produces problems when creating tag 	  
 	    dir("masterbranch"){
           git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
 		}
@@ -38,7 +39,9 @@ pipeline {
         sh 'ls -al'
 	    sh 'gradle --version'
         dir("masterbranch"){		
-          sh 'gradle release publish -Prelease.useAutomaticVersion=true --info'	    
+// on jenkins, the release plugin publishes the artefacts
+//          sh 'gradle release publish -Prelease.useAutomaticVersion=true --info'
+	      sh 'gradle release -Prelease.useAutomaticVersion=true --info'
 		}
       }
     }
