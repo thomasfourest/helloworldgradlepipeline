@@ -210,5 +210,5 @@ release {
 release {
 // custom release step : The release-plugin has two tasks which are exactly for the usecase of hooking other tasks in the release process,
 // namely beforeReleaseBuild and afterReleaseBuild. This tasks (and the dependencies you set) are executed before or respectively after the build task.
-    afterReleaseBuild.dependsOn publish
+//    afterReleaseBuild.dependsOn publish
 }
