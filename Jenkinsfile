@@ -26,12 +26,12 @@ pipeline {
 */
 
     stage("Build and deploy"){
-	steps{
-	sh 'ls -al'	
-	echo "JAVA_HOME = ${JAVA_HOME}"
-          sh 'ls -al'
-	      sh 'gradle --version'	
-          sh 'gradle clean build publish --info'	    
+	  steps{
+	    sh 'ls -al'	
+	    echo "JAVA_HOME = ${JAVA_HOME}"
+        sh 'ls -al'
+	    sh 'gradle --version'	
+        sh 'gradle clean build publish --info'	    
       }
     }
   }
