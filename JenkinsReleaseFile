@@ -25,7 +25,9 @@ pipeline {
 
     stage("checkout"){
       steps{
-        git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
+	    dir("masterbranch"){
+          git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
+		}
       }		
     }
 
@@ -34,9 +36,30 @@ pipeline {
 	    sh 'ls -al'	
 	    echo "JAVA_HOME = ${JAVA_HOME}"
         sh 'ls -al'
-	    sh 'gradle --version'	
-        sh 'gradle release publish -Prelease.useAutomaticVersion=true --info'	    
+	    sh 'gradle --version'
+        dir("masterbranch"){		
+          sh 'gradle release publish -Prelease.useAutomaticVersion=true --info'	    
+		}
       }
+    }
+  }
+
+  post {
+    always {
+      junit allowEmptyResults: true, testResults: '**/target/surefire-reports/TEST*.xml'
+      echo 'clean up our workspace'
+      script {
+        def wrkspcDir = pwd()
+        dir("${wrkspcDir}@script") {
+          println "delete ${wrkspcDir}@script"
+          deleteDir()
+        }
+        dir("${wrkspcDir}@tmp") {
+          println "delete ${wrkspcDir}@tmp"
+          deleteDir()
+        }
+      }
+      cleanWs cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, notFailBuild: true
     }
   }
 
