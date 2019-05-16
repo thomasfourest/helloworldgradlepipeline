@@ -1,0 +1,458 @@
+Démarré par l'utilisateur Thomas FOUREST
+Obtained JenkinsReleaseFile from git git://github.com/thomasfourest/helloworldgradlepipeline.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] node
+Running on SandboxNode in /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Cloning the remote Git repository
+Cloning repository git://github.com/thomasfourest/helloworldgradlepipeline.git
+ > git init /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease # timeout=10
+Fetching upstream changes from git://github.com/thomasfourest/helloworldgradlepipeline.git
+ > git --version # timeout=10
+ > git fetch --tags --progress git://github.com/thomasfourest/helloworldgradlepipeline.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url git://github.com/thomasfourest/helloworldgradlepipeline.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git://github.com/thomasfourest/helloworldgradlepipeline.git # timeout=10
+Fetching upstream changes from git://github.com/thomasfourest/helloworldgradlepipeline.git
+ > git fetch --tags --progress git://github.com/thomasfourest/helloworldgradlepipeline.git +refs/heads/*:refs/remotes/origin/*
+Checking out Revision b34b618a17d93a4eee0920fdd3ad4215f67804d2 (refs/remotes/origin/master)
+Commit message: "sync after release"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (clean)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] deleteDir
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (checkout)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] dir
+Running in /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch
+[Pipeline] {
+[Pipeline] git
+Cloning the remote Git repository
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b34b618a17d93a4eee0920fdd3ad4215f67804d2
+ > git rev-list --no-walk d81aa0b2f0e5ebc05d4c98256c3340bcef000a02 # timeout=10
+Cloning repository git@github.com:thomasfourest/helloworldgradlepipeline.git
+ > git init /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch # timeout=10
+Fetching upstream changes from git@github.com:thomasfourest/helloworldgradlepipeline.git
+ > git --version # timeout=10
+ > git fetch --tags --progress git@github.com:thomasfourest/helloworldgradlepipeline.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url git@github.com:thomasfourest/helloworldgradlepipeline.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:thomasfourest/helloworldgradlepipeline.git # timeout=10
+Fetching upstream changes from git@github.com:thomasfourest/helloworldgradlepipeline.git
+ > git fetch --tags --progress git@github.com:thomasfourest/helloworldgradlepipeline.git +refs/heads/*:refs/remotes/origin/*
+Checking out Revision b34b618a17d93a4eee0920fdd3ad4215f67804d2 (refs/remotes/origin/master)
+Commit message: "sync after release"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build and deploy)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ ls -al
+total 12
+drwxr-xr-x  3 jenkins jenkins 4096 16 mai   11:51 .
+drwxr-xr-x 11 jenkins jenkins 4096 16 mai   11:51 ..
+drwxr-xr-x  5 jenkins jenkins 4096 16 mai   11:51 masterbranch
+[Pipeline] echo
+JAVA_HOME = /ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144
+[Pipeline] sh
++ ls -al
+total 12
+drwxr-xr-x  3 jenkins jenkins 4096 16 mai   11:51 .
+drwxr-xr-x 11 jenkins jenkins 4096 16 mai   11:51 ..
+drwxr-xr-x  5 jenkins jenkins 4096 16 mai   11:51 masterbranch
+[Pipeline] sh
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b34b618a17d93a4eee0920fdd3ad4215f67804d2
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master b34b618a17d93a4eee0920fdd3ad4215f67804d2
++ gradle --version
+
+------------------------------------------------------------
+Gradle 5.3.1
+------------------------------------------------------------
+
+Build time:   2019-03-28 09:09:23 UTC
+Revision:     f2fae6ba563cfb772c8bc35d31e43c59a5b620c3
+
+Kotlin:       1.3.21
+Groovy:       2.5.4
+Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
+JVM:          1.8.0_144 (Oracle Corporation 25.144-b01)
+OS:           Linux 3.8.13-118.17.4.el6uek.x86_64 amd64
+
+[Pipeline] dir
+Running in /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch
+[Pipeline] {
+[Pipeline] sh
++ gradle release -Prelease.useAutomaticVersion=true --info
+Initialized native services in: /var/lib/jenkins/.gradle/native
+Removing 0 daemon stop events from registry
+Starting a Gradle Daemon (subsequent builds will be faster)
+Starting process 'Gradle build daemon'. Working directory: /var/lib/jenkins/.gradle/daemon/5.3.1 Command: /ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/bin/java -XX:MaxMetaspaceSize=256m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=FR -Duser.language=fr -Duser.variant -cp /ssdprod/jenkins/sandboxNode/home/tools/hudson.plugins.gradle.GradleInstallation/gradle_5.3.1/lib/gradle-launcher-5.3.1.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 5.3.1
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 0.84 secs.
+The client will now receive all logging from the daemon (pid: 30475). The daemon log file: /var/lib/jenkins/.gradle/daemon/5.3.1/daemon-30475.out.log
+Starting build in new daemon [memory: 477,6 MB]
+Closing daemon's stdin at end of input.
+The daemon will no longer process any standard input.
+Using 24 worker leases.
+Starting Build
+Settings evaluated using settings file '/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/settings.gradle'.
+Projects loaded. Root project using build file '/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/build.gradle'.
+Included projects: [root project 'helloworldgradlepipeline']
+
+> Configure project :
+Evaluating root project 'helloworldgradlepipeline' using build file '/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/build.gradle'.
+All projects evaluated.
+Selected primary task 'release' from project :
+Tasks to be executed: [task ':release']
+:release (Thread[Execution worker for ':',5,main]) started.
+
+> Configure project :helloworldgradlepipeline
+Evaluating project ':helloworldgradlepipeline' using build file '/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/build.gradle'.
+:helloworldgradlepipeline:createScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:createScmAdapter
+Task ':helloworldgradlepipeline:createScmAdapter' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:createScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.03 secs.
+:helloworldgradlepipeline:initScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:initScmAdapter
+Task ':helloworldgradlepipeline:initScmAdapter' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, branch, --no-color] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, branch, --no-color] produced output: [* master]
+:helloworldgradlepipeline:initScmAdapter (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.065 secs.
+:helloworldgradlepipeline:checkCommitNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:checkCommitNeeded
+Task ':helloworldgradlepipeline:checkCommitNeeded' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, status, --porcelain] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, status, --porcelain] produced output: []
+:helloworldgradlepipeline:checkCommitNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.015 secs.
+:helloworldgradlepipeline:checkUpdateNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :release
+Task ':release' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Selected primary task ':createScmAdapter' from project :
+Selected primary task ':initScmAdapter' from project :
+Selected primary task ':checkCommitNeeded' from project :
+Selected primary task ':checkUpdateNeeded' from project :
+Selected primary task ':unSnapshotVersion' from project :
+Selected primary task ':confirmReleaseVersion' from project :
+Selected primary task ':checkSnapshotDependencies' from project :
+Selected primary task ':runBuildTasks' from project :
+Selected primary task ':preTagCommit' from project :
+Selected primary task ':createReleaseTag' from project :
+Selected primary task ':updateVersion' from project :
+Selected primary task ':commitNewVersion' from project :
+
+> Task :helloworldgradlepipeline:checkUpdateNeeded
+Task ':helloworldgradlepipeline:checkUpdateNeeded' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, remote, update] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, remote, update] produced output: [Fetching origin]
+Running [git, status, --porcelain, -b] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, status, --porcelain, -b] produced output: []
+Running [git, status, --porcelain, -b] produced an error: [error: unknown switch `b'
+usage: git status [options] [--] <filepattern>...
+
+    -v, --verbose         be verbose
+    -s, --short           show status concisely
+    --porcelain           show porcelain output format
+    -z, --null            terminate entries with NUL
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)]
+:helloworldgradlepipeline:checkUpdateNeeded (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 2.505 secs.
+:helloworldgradlepipeline:unSnapshotVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:unSnapshotVersion
+Task ':helloworldgradlepipeline:unSnapshotVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:unSnapshotVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.233 secs.
+:helloworldgradlepipeline:confirmReleaseVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:confirmReleaseVersion
+Task ':helloworldgradlepipeline:confirmReleaseVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:confirmReleaseVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.003 secs.
+:helloworldgradlepipeline:checkSnapshotDependencies (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:checkSnapshotDependencies
+Task ':helloworldgradlepipeline:checkSnapshotDependencies' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:checkSnapshotDependencies (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.027 secs.
+:helloworldgradlepipeline:runBuildTasks (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Configure project :helloworldgradlepipeline:helloworldgradlepipeline
+Evaluating project ':helloworldgradlepipeline:helloworldgradlepipeline' using build file '/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/build.gradle'.
+[versioning] WARNING - the working copy has unstaged or uncommitted changes.
+:helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild UP-TO-DATE
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:beforeReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline',5,main]) completed. Took 0.002 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:compileJava
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:compileJava' is not up-to-date because:
+  No history is available.
+All input files are considered out-of-date for incremental task ':helloworldgradlepipeline:helloworldgradlepipeline:compileJava'.
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with JDK Java compiler API.
+Created classpath snapshot for incremental compilation in 0.043 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.579 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:processResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:processResources
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:processResources' is not up-to-date because:
+  No history is available.
+:helloworldgradlepipeline:helloworldgradlepipeline:processResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.036 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:classes (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:classes
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:classes' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:classes (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:jar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:jar
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:jar' is not up-to-date because:
+  No history is available.
+:helloworldgradlepipeline:helloworldgradlepipeline:jar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.019 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:javadoc (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:runBuildTasks
+Task ':helloworldgradlepipeline:runBuildTasks' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Selected primary task ':beforeReleaseBuild' from project :
+Selected primary task ':build' from project :
+Selected primary task ':afterReleaseBuild' from project :
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:javadoc
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:javadoc' is not up-to-date because:
+  No history is available.
+Starting process 'command '/ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/bin/javadoc''. Working directory: /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch Command: /ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/bin/javadoc @/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/build/tmp/javadoc/javadoc.options
+Successfully started process 'command '/ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/bin/javadoc''
+:helloworldgradlepipeline:helloworldgradlepipeline:javadoc (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 1.427 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:javadocJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:javadocJar
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:javadocJar' is not up-to-date because:
+  No history is available.
+:helloworldgradlepipeline:helloworldgradlepipeline:javadocJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.013 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar' is not up-to-date because:
+  No history is available.
+:helloworldgradlepipeline:helloworldgradlepipeline:sourcesJar (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.006 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:assemble (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:assemble
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:assemble' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:assemble (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava' is not up-to-date because:
+  No history is available.
+All input files are considered out-of-date for incremental task ':helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava'.
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with JDK Java compiler API.
+Created classpath snapshot for incremental compilation in 0.024 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:compileTestJava (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.15 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:processTestResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:processTestResources
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:processTestResources' is not up-to-date because:
+  No history is available.
+:helloworldgradlepipeline:helloworldgradlepipeline:processTestResources (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.004 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:testClasses (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:testClasses
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:testClasses' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:testClasses (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:test (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+Gradle Test Executor 1 started executing tests.
+Gradle Test Executor 1 finished executing tests.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:test
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:test' is not up-to-date because:
+  No history is available.
+Starting process 'Gradle Test Executor 1'. Working directory: /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch Command: /ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/bin/java -Djava.security.manager=worker.org.gradle.process.internal.worker.child.BootstrapSecurityManager -Dorg.gradle.native=false -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=FR -Duser.language=fr -Duser.variant -ea -cp /var/lib/jenkins/.gradle/caches/5.3.1/workerMain/gradle-worker.jar worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 1'
+Successfully started process 'Gradle Test Executor 1'
+
+com.devops.MyHelloTest > testRunMe STANDARD_OUT
+    2019-05-16 11:52:06 DEBUG MyHello:22 - This is debug : Hello
+    2019-05-16 11:52:06 INFO  MyHello:26 - This is info : Hello
+    2019-05-16 11:52:06 WARN  MyHello:29 - This is warn : Hello
+    2019-05-16 11:52:06 ERROR MyHello:30 - This is fake error : Hello
+    2019-05-16 11:52:06 FATAL MyHello:31 - This is fake fatal : Hello
+Finished generating test XML results (0.012 secs) into: /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/build/test-results/test
+Generating HTML test report...
+Finished generating test html results (0.021 secs) into: /ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch/build/reports/tests/test
+:helloworldgradlepipeline:helloworldgradlepipeline:test (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.788 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:check (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:check
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:check' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:check (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:build (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:build
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:build' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:build (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication' is not up-to-date because:
+  Task.upToDateWhen is false.
+:helloworldgradlepipeline:helloworldgradlepipeline:generatePomFileForApiPublication (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.131 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository
+Task ':helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Publishing to repository 'maven' (http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/)
+Deploying to http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.14/helloworldgradlepipeline-1.0.14.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.14/helloworldgradlepipeline-1.0.14.pom to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.14/helloworldgradlepipeline-1.0.14-sources.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/1.0.14/helloworldgradlepipeline-1.0.14-javadoc.jar to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Downloading: com/devops/helloworldgradlepipeline/maven-metadata.xml from repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+Uploading: com/devops/helloworldgradlepipeline/maven-metadata.xml to repository remote at http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/
+:helloworldgradlepipeline:helloworldgradlepipeline:publishApiPublicationToMavenRepository (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 1.505 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:publish (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:publish
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:publish' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:publish (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) started.
+
+> Task :helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild
+Skipping task ':helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild' as it has no actions.
+:helloworldgradlepipeline:helloworldgradlepipeline:afterReleaseBuild (Thread[Execution worker for ':helloworldgradlepipeline:helloworldgradlepipeline' Thread 21,5,main]) completed. Took 0.0 secs.
+:helloworldgradlepipeline:runBuildTasks (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 5.042 secs.
+:helloworldgradlepipeline:preTagCommit (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:preTagCommit
+Task ':helloworldgradlepipeline:preTagCommit' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, commit, -m, [Gradle Release Plugin] - pre tag commit:  '1.0.14'., -a] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, commit, -m, [Gradle Release Plugin] - pre tag commit:  '1.0.14'., -a] produced output: [[master ea23bae] [Gradle Release Plugin] - pre tag commit:  '1.0.14'.
+ 1 files changed, 1 insertions(+), 1 deletions(-)]
+Running [git, remote] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, remote] produced output: [origin]
+Running [git, branch, --no-color] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, branch, --no-color] produced output: [* master]
+Running [git, push, --porcelain, origin, master] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, push, --porcelain, origin, master] produced output: [To git@github.com:thomasfourest/helloworldgradlepipeline.git
+ 	refs/heads/master:refs/heads/master	b34b618..ea23bae
+Done]
+:helloworldgradlepipeline:preTagCommit (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 3.938 secs.
+:helloworldgradlepipeline:createReleaseTag (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:createReleaseTag
+Task ':helloworldgradlepipeline:createReleaseTag' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, tag, -a, 1.0.14, -m, [Gradle Release Plugin] - creating tag:  '1.0.14'.] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, tag, -a, 1.0.14, -m, [Gradle Release Plugin] - creating tag:  '1.0.14'.] produced output: []
+Running [git, remote] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, remote] produced output: [origin]
+Running [git, push, --porcelain, origin, 1.0.14] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, push, --porcelain, origin, 1.0.14] produced output: [To git@github.com:thomasfourest/helloworldgradlepipeline.git
+*	refs/tags/1.0.14:refs/tags/1.0.14	[new tag]
+Done]
+:helloworldgradlepipeline:createReleaseTag (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 3.642 secs.
+:helloworldgradlepipeline:updateVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:updateVersion
+Task ':helloworldgradlepipeline:updateVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:helloworldgradlepipeline:updateVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 0.009 secs.
+:helloworldgradlepipeline:commitNewVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) started.
+
+> Task :helloworldgradlepipeline:commitNewVersion
+Task ':helloworldgradlepipeline:commitNewVersion' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Running [git, commit, -m, [Gradle Release Plugin] - new version commit:  '1.0.15-SNAPSHOT'., -a] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, commit, -m, [Gradle Release Plugin] - new version commit:  '1.0.15-SNAPSHOT'., -a] produced output: [[master bf764ff] [Gradle Release Plugin] - new version commit:  '1.0.15-SNAPSHOT'.
+ 1 files changed, 1 insertions(+), 1 deletions(-)]
+Running [git, remote] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, remote] produced output: [origin]
+Running [git, branch, --no-color] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, branch, --no-color] produced output: [* master]
+Running [git, push, --porcelain, origin, master] in [/ssdprod/jenkins/sandboxNode/home/workspace/helloworldgradlepipelinerelease/masterbranch]
+Running [git, push, --porcelain, origin, master] produced output: [To git@github.com:thomasfourest/helloworldgradlepipeline.git
+ 	refs/heads/master:refs/heads/master	ea23bae..bf764ff
+Done]
+:helloworldgradlepipeline:commitNewVersion (Thread[Execution worker for ':helloworldgradlepipeline',5,main]) completed. Took 3.824 secs.
+:release (Thread[Execution worker for ':',5,main]) completed. Took 19.528 secs.
+
+BUILD SUCCESSFUL in 25s
+1 actionable task: 1 executed
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
