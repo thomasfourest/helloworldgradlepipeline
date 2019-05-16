@@ -27,7 +27,8 @@ pipeline {
       steps{
 // checkouting in the job root directory produces problems when creating tag 	  
 	    dir("masterbranch"){
-          git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
+//          git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
+          git branch: 'master', url: "git@github.com:thomasfourest/helloworldgradlepipeline.git"
 		}
       }		
     }
