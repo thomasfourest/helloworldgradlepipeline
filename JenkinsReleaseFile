@@ -47,6 +47,7 @@ pipeline {
     }
   }
 
+/*
   post {
     always {
       junit allowEmptyResults: true, testResults: '**/target/surefire-reports/TEST*.xml'
@@ -65,5 +66,6 @@ pipeline {
       cleanWs cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, notFailBuild: true
     }
   }
+*/
 
 }
