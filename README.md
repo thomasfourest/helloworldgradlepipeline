@@ -1,6 +1,6 @@
 # helloworldgradlepipeline
 
-Example of Gradle build and release method for a simple Springboot project 
+Example of Gradle build and release method for a simple Java project 
 
 ![alt text](https://github.com/thomasfourest/helloworldgradlepipeline/blob/master/Gradle_Logo.png)
 
@@ -80,5 +80,4 @@ This project isn't licensed - see the [LICENSE.md](https://www.gnu.org/licenses/
 ## Acknowledgments
 
 * Jenkins pipeline
-* Spring Boot
 * etc
